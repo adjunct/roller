@@ -7,7 +7,7 @@ The Apache Software Foundation (http://www.apache.org/).
 The product includes snippets of code from the Blojsom blog server
 Copyright 2003 David A. Czarnecki & Mark Lussier. All rights reserved.
 
-The product includes snippets of code from the Pebble blog server
+The product includes snippets of code from the Pebble blog server 
 Copyright 2003 Simon Brown, All rights reserved.
 
 The product includes snippets of code written by Sun Microsystems, Inc.
