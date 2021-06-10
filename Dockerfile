@@ -34,7 +34,7 @@ WORKDIR /tmp/roller
 RUN git checkout roller-6.0.x; \
 mvn -Duser.home=/builder/home -DskipTests=true -B clean install
 
-
+ 
 # STAGE 2 - PACKAGE ------------------------------------------------
 
 FROM tomcat:9.0.20-jre11-slim
