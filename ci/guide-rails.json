@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"version": 1
+		"version": 2
 	},
 	"application": {
 		"name": "roller",
@@ -15,6 +15,13 @@
 				"name": "Build",
 				"segment_type": "build",
 				"exit_actions": {},
+				"properties": [
+					{
+						"name": "environment",
+						"value": "test",
+						"type": "string"
+					}
+				],
 				"deployment_strategy": {},
 				"application_init": {},
 				"packages": [
@@ -32,15 +39,21 @@
 						"value": "((application.name))"
 					}
 				],
+				"gated": true,
 				"tasks": [
 					{
-						"name": "roller",
-						"docker_options": {}
-					},
-					{
-						"name": "Stage1",
+						"name": "BuildM",
+						"steps": [
+							{
+								"name": "Build",
+								"definition": "Build",
+								"command": "mvn packdge",
+								"properties": null
+							}
+						],
 						"docker_options": {
-							"docker_registry_alias_id": "b7538d0f-4373-4d39-7300-76e6642699b1"
+							"docker_registry_alias_id": "b7538d0f-4373-4d39-7300-76e6642699b1",
+							"repository": "adoptopenjdk/maven-openjdk11:latest"
 						}
 					}
 				]
